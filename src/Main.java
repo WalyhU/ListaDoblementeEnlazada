@@ -1,10 +1,10 @@
-import LinkedList.DoublyLinkedList;
+import LinkedList.ListaDoblementeEnlazada;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
+        ListaDoblementeEnlazada<Integer> list = new ListaDoblementeEnlazada<>();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -30,7 +30,7 @@ public class Main {
         }
     }
 
-    private static void processOption(int option, DoublyLinkedList<Integer> list, Scanner scanner) {
+    private static void processOption(int option, ListaDoblementeEnlazada<Integer> list, Scanner scanner) {
         int number;
         switch (option) {
             case 1:
@@ -58,12 +58,12 @@ public class Main {
             case 7:
                 System.out.print("Ingrese un número para buscar: ");
                 number = scanner.nextInt();
-                System.out.println("El número " + number + " está en la lista: " + list.searchByValue(number));
+                System.out.println("El número " + number + " está en la lista: " + list.searchByValue(number).toString());
                 break;
             case 8:
                 System.out.print("Ingrese un índice para buscar: ");
                 number = scanner.nextInt();
-                System.out.println("El número en el índice " + number + " es: " + list.searchByIndex(number));
+                System.out.println("El número en el índice " + number + " es: " + list.searchByIndex(number).toString());
                 break;
             case 9:
                 System.out.print("Ingrese un número para borrar: ");
